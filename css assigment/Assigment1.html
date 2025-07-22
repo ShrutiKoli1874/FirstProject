@@ -87,9 +87,14 @@
             border-radius:4px;
         }
         .f{
-            border-radius: 8px;
+            display: flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
-            gap: 10px;
+            margin-top:10px;
+        }
+        .b{
+            border: 2px solid black;
+            border-radius: 5px;
         }
     </style>
 </head>
@@ -119,10 +124,10 @@
     </div>
     <img src="./bank.webp" class="img">
     <div class="f">
-        <input type="text" placeholder="Beneficary name" class="f">
-        <input type="text" placeholder="Account No." class="f">
-        <input type="text" placeholder="Branch Name" class="f">
-        <input type="text" placeholder="IFSC code" class="f">
+        <input type="text" placeholder="Beneficary name" class="b" >
+        <input type="text" placeholder="Account No." class="b">
+        <input type="text" placeholder="Branch Name" class="b" >
+        <input type="text" placeholder="IFSC code" class="b">
     </div>
     <div class="navbar2">
         <p class="a">About us</p>

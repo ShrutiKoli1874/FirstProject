@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Assignment 2</title>
+    <style>
+        .container{
+    background-color:blueviolet;
+    height: 250px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border:3px solid black;
+    border-radius: 10px;
+    margin-top:30px;
+    margin-left:400px;
+    /* padding:20px; */
+}
+
+form{
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.label{
+    height: 100px;
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.input{
+    height: 100px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;  
+}
+
+input{
+    height: 22px;
+    margin-bottom:7px;
+    width: 180px;
+}
+
+label{
+    height: 20px;
+    margin-bottom: 12px;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+button{
+    border:2px solid black;
+    border-radius:5px;
+    height:40px;
+    width: 100px;
+    margin-left: 10px;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <form>
+        <div class="label">
+            <label>Enter number 1: </label>
+            <label>Enter number 2: </label>
+            <label>Result: </label>
+        </div>
+        <div class="input">
+            <input type="text" id="num1">
+            <input type="text" id="num2">
+            <input type="text" id="result" placeholder="Press any 1 button from below for result">
+        </div> 
+    </form>
+    <div class="operations">
+            <button id="add" onclick="Addition()">Addition</button>
+            <button id="sub" onclick="Subtraction()">Subtraction</button>
+            <button id="mul" onclick="Multiplication()">Multiplication</button>
+            <button id="div" onclick="Division()">Division</button>
+    </div>
+</div>
+<script>
+
+function Addition()
+{
+    a=parseInt(document.getElementById("num1").value);
+    b=parseInt(document.getElementById("num2").value);
+    console.log(a);
+    console.log(b);
+    addition=(a+b);
+    console.log(addition);
+    result.value=(addition);
+}
+function Subtraction()
+{
+    a=parseInt(document.getElementById("num1").value);
+    b=parseInt(document.getElementById("num2").value);
+    console.log(a);
+    console.log(b);
+    subtraction=(a-b);
+    console.log(subtraction);
+    result.value=(subtraction);
+}
+function Multiplication()
+{
+    a=parseInt(document.getElementById("num1").value);
+    b=parseInt(document.getElementById("num2").value);
+    console.log(a);
+    console.log(b);
+    multiplication=(a*b);
+    console.log(multiplication);
+    result.value=(multiplication);
+}
+function Division()
+{
+    a=parseInt(document.getElementById("num1").value);
+    b=parseInt(document.getElementById("num2").value);
+    console.log(a);
+    console.log(b);
+    division=(a/b);
+    console.log(division);
+    result.value=(division);
+}
+
+
+</script>
+    
+</body>
+</html>

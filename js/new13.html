@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            background-color:palevioletred;
+            height:500px;
+            width:350px;
+            border: 2px solid black;
+            border-radius: 5px;
+            margin-left:18%;
+            margin-top: 5%;
+            box-shadow: 1px 1px 1px gray;
+        }
+        .p{
+           margin-top:10px;
+           margin-bottom:10px;
+           height: 28px;
+           font-size: large;
+           margin-left: 22px;
+          }
+        .head{
+            text-align: center;
+        }
+        .Data{
+            margin-left:5%;
+        }
+        input{
+                margin-top:12px;
+               height: 18px;
+                background-color: white;
+            }
+            .container{
+                display: flex;
+                justify-content: space-around;
+            }
+            .return{
+                    display: flex;
+                  flex-direction: column;
+                   align-items: center;
+}
+            button{
+                margin-left:7%;
+                margin-top: 20px;
+                background-color:lawngreen;
+                margin-top:10px;
+               margin-bottom: -5px;
+                 height: 40px;
+              border:2px solid black;
+              border-radius: 5px;
+              display: flex;
+              align-items: center;
+               flex-wrap: wrap;
+               cursor: pointer;
+            }
+            button:hover{
+                background-color: aqua;
+            }
+           #last{
+                   background-color:aquamarine;
+                   display: flex;
+                   text-align: center;
+                   flex-wrap: wrap;
+                   height:60px;
+                   width:40%;
+                   margin-left:25px;
+                   margin-top: 5px;
+                   border:2px solid black;
+                   border-radius: 5px;
+                   font-size: large;
+                }
+
+    </style>
+</head>
+<body>
+    <div class="form">
+        <h2 class="head">Salery Slip</h2>
+        <form>
+            <div class="container">
+            <div class="Data">
+                   <p>Employee ID: </p>
+                    <p>Employee Name: </p>
+                    <p>Monthly Salary: </p>
+                    <p>Total Work Days:</p>
+                    <p>Enter PF: </p>
+                    <p>Enter HRA: </p>
+                    <p>Enter TA: </p>
+                    <p>Enter Absent Days:</p>
+           </div>
+           <div class="input">
+                    <input type="text" id="ID" placeholder="ID"><br>
+                    <input type="text" id="name" placeholder="Name"><br>
+                    <input type="text" id="mSalary" placeholder="Salary"><br>
+                    <input type="text" id="td" placeholder="Total working days"><br>
+                    <input type="text" id="pf" placeholder="PF"><br>
+                    <input type="text" id="hra" placeholder="HRA"><br>
+                    <input type="text" id="ta" placeholder="TA"><br>
+                    <input type="text" id="ab" placeholder="Absent days"><br>
+                </div>         
+                 </div>
+            <div class="return">
+            <button onclick="submit()">submit</button><br>
+            <div id="last">
+                <p id="p">Final Salary </p>
+            </div>
+        </div>
+
+        </form>
+    </div>
+   <script>
+        function submit(){
+            id=(document.getElementById('ID').value);
+            console.log(id);
+            name=document.getElementById('Name').value;
+            console.log(id);
+            Total=parseInt(document.getElementById('msalary').value);
+            console.log(id);
+            td=parseInt(document.getElementById('td'));
+            console.log(id);
+            pf=parseInt(document.getElementById('pf').value);
+            console.log(id);
+            hra=parseInt(document.getElementById('hra'));
+            console.log(id);
+            ta=parseInt(document.getElementById('ta'));
+            console.log(id);
+            ab=parseInt(document.getElementById('ab'));
+            console.log(id);
+            finalSalary=parseInt(((mSalary/td)*(td-ab)) + hra + ta - pf);
+            console.log(fSalary);
+            if (finalSalary >=0)
+                last.innerHTML=("Final Salary of Employee <br> ID: "+id+"  "+name+ "<br>is Rs " +fSalary+" /-");
+            else
+                alert("Enter Valid Values");
+        }
+    </script>
+</body>
+</html>
