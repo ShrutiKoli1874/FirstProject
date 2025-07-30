@@ -15,7 +15,7 @@
             margin-top: 5%;
             box-shadow: 1px 1px 1px gray;
         }
-        .p{
+        .h3{
            margin-top:10px;
            margin-bottom:10px;
            height: 28px;
@@ -93,7 +93,7 @@
            <div class="input">
                     <input type="text" id="ID" placeholder="ID"><br>
                     <input type="text" id="name" placeholder="Name"><br>
-                    <input type="text" id="mSalary" placeholder="Salary"><br>
+                    <input type="text" id="Salary" placeholder="Salary"><br>
                     <input type="text" id="td" placeholder="Total working days"><br>
                     <input type="text" id="pf" placeholder="PF"><br>
                     <input type="text" id="hra" placeholder="HRA"><br>
@@ -104,7 +104,7 @@
             <div class="return">
             <button onclick="submit()">submit</button><br>
             <div id="last">
-                <p id="p">Final Salary </p>
+                <h3 id="h2">Final Salary </h3>
             </div>
         </div>
 
@@ -112,29 +112,18 @@
     </div>
    <script>
         function submit(){
-            id=(document.getElementById('ID').value);
-            console.log(id);
-            name=document.getElementById('Name').value;
-            console.log(id);
-            Total=parseInt(document.getElementById('msalary').value);
-            console.log(id);
-            td=parseInt(document.getElementById('td'));
-            console.log(id);
-            pf=parseInt(document.getElementById('pf').value);
-            console.log(id);
-            hra=parseInt(document.getElementById('hra'));
-            console.log(id);
-            ta=parseInt(document.getElementById('ta'));
-            console.log(id);
-            ab=parseInt(document.getElementById('ab'));
-            console.log(id);
-            finalSalary=parseInt(((mSalary/td)*(td-ab)) + hra + ta - pf);
-            console.log(fSalary);
-            if (finalSalary >=0)
-                last.innerHTML=("Final Salary of Employee <br> ID: "+id+"  "+name+ "<br>is Rs " +fSalary+" /-");
-            else
-                alert("Enter Valid Values");
+            id=document.getElementById("ID").value;
+            name=document.getElementById("name").value;
+            Salary= parseInt(document.getElementById("Salary").value);
+            td= parseInt(document.getElementById("td").value); 
+            pf= parseInt(document.getElementById("pf").value);
+            hra= parseInt(document.getElementById("hra").value);
+            ta= parseInt(document.getElementById("ta").value);
+            ab= parseInt(document.getElementById("ab").value);
+        
+       
         }
+        
     </script>
 </body>
 </html>
